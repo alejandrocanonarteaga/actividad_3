@@ -1,0 +1,14 @@
+# docker-compose.yml
+version: '3.7'
+
+services:
+  mongodb:
+    build: .
+    image: mongodb-docker
+    container_name: mongodb-container
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: nombre_de_tu_base_de_datos
